@@ -1,0 +1,9 @@
+BEGIN 
+   DBMS_STATS.GATHER_TABLE_STATS(ownname => 'BIS', 
+                                 tabname => 'calls_00_012016', 
+                                 /*estimate_percent => 5,*/ 
+                                 degree => 20, 
+                                 method_opt => 'FOR ALL COLUMNS SIZE AUTO', 
+                                 cascade => TRUE, 
+                                 no_invalidate => FALSE); 
+END;
